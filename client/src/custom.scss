@@ -1,0 +1,10 @@
+$primary: hsl(214, 70%, 48%);
+$danger : rgb(91, 150, 218);
+
+$theme-colors : (
+    "primary":$primary,
+    "danger":$danger
+);
+
+/* import bootstrap to set changes */
+@import "~bootstrap/scss/bootstrap";
