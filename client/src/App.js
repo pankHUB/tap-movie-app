@@ -8,20 +8,25 @@ function App() {
   return (
     <>
       <Header/>
-      <Container className="mt-3">
+      <Container >
       <SearchBar/>
+      <div className="container d-flex m-2 flex-wrap">
       { movies.map(movies => {
         return (
-          <Card style={{ width: '18rem' }}>
+          <Card style={{ width: '20rem' }} className="m-2">
             <Card.Img variant="top" src={movies.poster} />
             <Card.Body>
               <Card.Title>{movies.title}</Card.Title>
-              
-              <Button variant="primary">Add</Button>
+              <div>
+                It is a long established fact that a reader will be distracted by
+                the readable content of a page when looking at its layout.
+              </div>
+              <Button variant="danger">Add</Button>
             </Card.Body>
           </Card>
         )
-      })};
+      })}
+      </div>
       </Container>
     </>
   );

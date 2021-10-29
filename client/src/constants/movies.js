@@ -18,6 +18,11 @@ const movies = [{
     title : 'Superman',
     poster : '',
     rating : 8
+},{
+    id : 5,
+    title : 'Tenet',
+    poster : '',
+    rating : 8.5  
 }];
 
 
