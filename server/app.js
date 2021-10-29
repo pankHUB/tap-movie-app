@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 const express = require('express');
 const path = require('path');
@@ -7,6 +8,8 @@ const { Console } = require('console');
 
 
 const app = express();
+
+const PORT_URI = process.env.PORT_URI;
 
 
 app.use(logger('dev'));
@@ -34,6 +37,8 @@ app.use((err, req, res, next) => {
   res.render('error');
 });
 
-app.listen(4000,);
+app.listen(PORT_URI,() => {
+  console.log("server is running on PORT :4000");
+});
 
 module.exports = app;
