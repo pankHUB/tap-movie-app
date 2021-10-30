@@ -26,6 +26,5 @@ const movies = [{
 }];
 
 
-export {
-    movies
-}
+module.exports = 
+    movies;

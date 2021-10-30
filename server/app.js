@@ -4,21 +4,26 @@ const express = require('express');
 const path = require('path');
 const logger = require('morgan');
 const { Console } = require('console');
+const cors = require('cors')
 
-
+const movies = require('./constants/movies')
 
 const app = express();
 
 const PORT_URI = process.env.PORT_URI;
 
 
+app.use(cors());
 app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 
-
 app.get('/',(req, res)=>{
-  res.send('<h1>server is running</h1>')
+  res.send(`server is up and running`);
+})
+
+app.get('/movies',(req, res)=>{
+  res.json(movies);
 })
 
 // catch 404 and forward to error handle//
