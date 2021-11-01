@@ -23,6 +23,11 @@ const movies = [{
     title : 'Tenet',
     poster : '',
     rating : 8.5  
+},{
+    id:5,
+    title:'ram',
+    poster:"",
+    rating: 10
 }];
 
 
