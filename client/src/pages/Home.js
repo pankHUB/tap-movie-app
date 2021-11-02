@@ -19,7 +19,7 @@ const Home = () => {
   const fetchMovies = async() =>{
     try {
       setLoding(true);
-      const response  = await axios("http://localhost:4000/movies");
+      const response  = await axios("http://localhost:4000/api/movies");
       setMovies(response.data);
       setLoding(false)
     } 

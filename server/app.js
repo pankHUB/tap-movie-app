@@ -5,8 +5,9 @@ const path = require('path');
 const logger = require('morgan');
 const { Console } = require('console');
 const cors = require('cors')
+const {Sequelize} = require('sequelize');
 
-const movies = require('./constants/movies')
+const apiRoutes = require('./routes/index.js');
 
 const app = express();
 
@@ -22,9 +23,7 @@ app.get('/',(req, res)=>{
   res.send(`server is up and running`);
 })
 
-app.get('/movies',(req, res)=>{
-  res.json(movies);
-})
+app.use('/api',apiRoutes);
 
 // catch 404 and forward to error handle//
 app.use((req, res, next) => {

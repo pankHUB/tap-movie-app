@@ -24,8 +24,8 @@ const movies = [{
     poster : '',
     rating : 8.5  
 },{
-    id:5,
-    title:'ram',
+    id:6,
+    title:'Ram',
     poster:"",
     rating: 10
 }];
